@@ -1,38 +1,327 @@
+/* General */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #1c1c1e;
   color: white;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 90%;
+  margin-bottom: 20px;
+  background-color: #2c2c2e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container h1,
+.container h2 {
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 18px;  /* Reducir el tamaño del texto */
+}
+
+.chart-section,
+.details-section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.chart-section {
+  width: 100%;
+}
+
+.details-section {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.consistency-score,
+.trading-objectives {
+  width: 100%;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+.bar-container {
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  border-radius: 5px;
+  position: relative;
+}
+
+.bar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  position: relative;
+}
+
+.red {
+  background-color: #ff4d4d;
+}
+
+.yellow {
+  background-color: #ffcc00;
+}
+
+.green {
+  background-color: rgb(90, 196, 180);
+}
+
+.progress-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.progress-label {
+  background-color: #007bff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.label-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+}
+
+.label {
+  color: white;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+/* Trading Objectives */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.status-icon.red {
+  color: #ff4d4d;
+}
+
+.status-icon.green {
+  color: rgb(90, 196, 180);
+}
+
+/* Account Details */
+.account-details-container {
+  background-color: #2c2c2e;
+  border-radius: 10px;
+  padding: 20px;
+  width: 340px;  /* Ancho más pequeño */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.account-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+}
+
+.account-row:last-child {
+  border-bottom: none;
+}
+
+.account-label {
+  color: #888;
+  font-weight: bold;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.account-value {
+  color: white;
+  font-weight: normal;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.link {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.ratio-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ratio-bar {
+  background-color: #007bff;
+  width: 80px;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 10px;
+}
+
+.ratio-value {
+  background-color: #007bff;
+  height: 100%;
+  text-align: left;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.ratio-remaining {
+  color: white;
+  font-weight: bold;
+}
+
+/* Chart Container */
+.chart-container {
+  background-color: #2c2c2e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 340px;  /* Ancho más pequeño */
+  height: 440px; /* Alto ajustado */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Consistency Score Container */
+.consistency-score-container {
+  background-color: #2c2c2e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 340px;  /* Ancho más pequeño */
+  margin: 0 auto;
+}
+
+/* Trading Objectives Section */
+.trading-objectives-container {
+  background-color: #2c2c2e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 340px;  /* Ancho más pequeño */
+  margin: 20px auto;
+}
+
+.trading-objectives-container h2 {
+  margin-bottom: 15px;
+  color: white;
+  text-align: left;
+  font-size: 18px;  /* Reducir el tamaño del texto */
+}
+
+.objectives-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.objectives-table th,
+.objectives-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+}
+
+.objective-title {
+  color: #007bff;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+  font-weight: bold;
+}
+
+.result {
+  color: white;
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+  font-weight: bold;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.status-icon.green {
+  color:rgb(90, 196, 180);
+  margin-right: 5px;
+}
+
+.approved {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-size: 14px;  /* Reducir el tamaño del texto */
+  font-weight: bold;
+}
+
+.progress-text {
+  font-size: 12px;  /* Reducido a 10px */
+  font-weight: bold;
+  text-align: center;
+  width: 100%;  /* Para que el texto se centre dentro de cada sección */
+}
+
+.insurance-container {
+  background-color: #007bff;  /* Color azul */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  width: 340px;  /* Ajustado al ancho que usas */
+  margin: 20px auto;  /* Espaciado debajo del contenedor de los objetivos */
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  font-size: 14px;  /* Tamaño del texto reducido para que se ajuste mejor */
+  line-height: 1.5;
 }

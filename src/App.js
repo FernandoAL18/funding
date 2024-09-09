@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import BalanceChart from './components/BalanceChart';
+import AccountDetails from './components/AccountDetails';
+import ConsistencyScore from './components/ConsistencyScore';
+import TradingObjectives from './components/TradingObjectives';
+import InsuranceOffer from './components/InsuranceOffer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="chart-section">
+        <h3>Resultados Actuales</h3>
+        <BalanceChart />
+      </div>
+      <div className="details-section">
+        <AccountDetails />
+      </div>
+      <ConsistencyScore /> {/* Sección de puntaje de consistencia */}
+      <TradingObjectives /> {/* Sección de objetivos de trading */}
+      <InsuranceOffer />
     </div>
   );
 }
