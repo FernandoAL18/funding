@@ -140,7 +140,7 @@ th, td {
 }
 
 .status-icon.green {
-  color: rgb(90, 196, 180);
+  color: #5ac4b4;
 }
 
 /* Account Details */
@@ -165,10 +165,12 @@ th, td {
 }
 
 .account-label {
-  color: #888;
+  color: #ffffff;
   font-weight: bold;
   text-align: left;
   font-size: 14px;  /* Reducir el tamaño del texto */
+  font-weight: bold;
+
 }
 
 .account-value {
@@ -176,6 +178,7 @@ th, td {
   font-weight: normal;
   text-align: left;
   font-size: 14px;  /* Reducir el tamaño del texto */
+  font-weight: bold;
 }
 
 .link {
@@ -324,4 +327,11 @@ th, td {
   text-align: left;
   font-size: 14px;  /* Tamaño del texto reducido para que se ajuste mejor */
   line-height: 1.5;
+}
+
+.approved-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  vertical-align: middle;
 }

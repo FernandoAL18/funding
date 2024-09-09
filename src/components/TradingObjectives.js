@@ -1,4 +1,5 @@
 import React from 'react';
+import aprobadoIcon from '../assets/aprobado.svg'; // Asegúrate de la ruta correcta
 
 const TradingObjectives = () => {
   return (
@@ -17,21 +18,21 @@ const TradingObjectives = () => {
             <td className="objective-title">+ Pérdida máxima del día -$20,000</td>
             <td className="result">-</td>
             <td className="status approved">
-              <span className="status-icon green">✔</span> Aprobado
+              <img src={aprobadoIcon} alt="Aprobado Icon" className="approved-icon" /> Aprobado
             </td>
           </tr>
           <tr>
             <td className="objective-title">+ Pérdida Máx. -$40,000</td>
             <td className="result">-</td>
             <td className="status approved">
-              <span className="status-icon green">✔</span> Aprobado
+              <img src={aprobadoIcon} alt="Aprobado Icon" className="approved-icon" /> Aprobado
             </td>
           </tr>
           <tr>
             <td className="objective-title">+ Beneficio</td>
             <td className="result">$65,577.39</td>
             <td className="status approved">
-              <span className="status-icon green">✔</span> Aprobado
+              <img src={aprobadoIcon} alt="Aprobado Icon" className="approved-icon" /> Aprobado
             </td>
           </tr>
         </tbody>
