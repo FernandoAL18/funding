@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Added for routing purposes
 import BalanceChart from './components/BalanceChart';
 import AccountDetails from './components/AccountDetails';
 import ConsistencyScore from './components/ConsistencyScore';
 import TradingObjectives from './components/TradingObjectives';
 import InsuranceOffer from './components/InsuranceOffer';
-import PaymentPopup from './components/PaymentPopup';  // Importa el componente del pop-up
+import PaymentPopup from './components/PaymentPopup';
 import './App.css';
 
 function App() {
@@ -17,10 +18,12 @@ function App() {
       <div className="details-section">
         <AccountDetails />
       </div>
-      <ConsistencyScore /> {/* Sección de puntaje de consistencia */}
-      <TradingObjectives /> {/* Sección de objetivos de trading */}
+      <ConsistencyScore /> 
+      <TradingObjectives /> 
       <InsuranceOffer />
-      <PaymentPopup />  {/* Añadimos el pop-up */}
+      <PaymentPopup />  
+      {/* Add a link to Metrix */}
+      <Link to="/metrix/530089422">Go to Metrix</Link> 
     </div>
   );
 }
