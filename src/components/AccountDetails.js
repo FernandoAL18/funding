@@ -39,7 +39,7 @@ const AccountDetails = () => {
       </div>
       <div className="account-row">
         <span className="account-label">Última actualización</span>
-        <span className="account-value">08/09/2024 18:57:21</span>
+        <span className="account-value">10/09/2024 18:57:21</span>
       </div>
     </div>
   );

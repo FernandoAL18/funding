@@ -4,6 +4,7 @@ import AccountDetails from './components/AccountDetails';
 import ConsistencyScore from './components/ConsistencyScore';
 import TradingObjectives from './components/TradingObjectives';
 import InsuranceOffer from './components/InsuranceOffer';
+import PaymentPopup from './components/PaymentPopup';  // Importa el componente del pop-up
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <ConsistencyScore /> {/* Sección de puntaje de consistencia */}
       <TradingObjectives /> {/* Sección de objetivos de trading */}
       <InsuranceOffer />
+      <PaymentPopup />  {/* Añadimos el pop-up */}
     </div>
   );
 }

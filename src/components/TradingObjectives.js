@@ -30,7 +30,7 @@ const TradingObjectives = () => {
           </tr>
           <tr>
             <td className="objective-title">+ Beneficio</td>
-            <td className="result">$65,577.39</td>
+            <td className="result">$75,870.10</td>
             <td className="status approved">
               <img src={aprobadoIcon} alt="Aprobado Icon" className="approved-icon" /> Aprobado
             </td>
